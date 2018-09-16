@@ -18,16 +18,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        supportActionBar?.let { actionBar ->
-            actionBar.title = getString(R.string.main_activity_title)
-        }
+        supportActionBar?.title = getString(R.string.main_activity_title)
     }
 
     private fun displayProfile(profile: Profile) {
         this.profile = profile
-        name_text_view.text = profile.name
-        email_text_view.text = profile.email
-        phone_text_view.text = profile.phone
+        text_name.text = profile.name
+        text_email.text = profile.email
+        text_phone.text = profile.phone
     }
 
     private fun shareProfile(profile: Profile) {

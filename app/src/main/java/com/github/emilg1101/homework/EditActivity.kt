@@ -15,21 +15,21 @@ class EditActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit)
 
-        supportActionBar?.let { actionBar ->
-            actionBar.title = getString(R.string.edit_activity_title)
-            actionBar.setDisplayHomeAsUpEnabled(true)
-            actionBar.setDisplayShowHomeEnabled(true)
+        supportActionBar?.apply {
+            title = getString(R.string.edit_activity_title)
+            setDisplayHomeAsUpEnabled(true)
+            setDisplayShowHomeEnabled(true)
         }
 
-        intent.extras.get(PROFILE_DATA_EXTRA)?.let {
-            (it as? Profile)?.let { profile -> displayProfile(profile) }
+        intent.extras.get(PROFILE_DATA_EXTRA)?.let { it ->
+            (it as? Profile)?.let { displayProfile(it) }
         }
     }
 
     private fun saveProfile() {
-        val name = name_text_input_layout.editText?.text.toString()
-        val email = email_text_input_layout.editText?.text.toString()
-        val phone = phone_text_input_layout.editText?.text.toString()
+        val name = input_name.editText?.text.toString()
+        val email = input_email.editText?.text.toString()
+        val phone = input_phone.editText?.text.toString()
         val intent = Intent(this, MainActivity::class.java)
         intent.putExtra(PROFILE_DATA_EXTRA, Profile(name, email, phone))
         setResult(Activity.RESULT_OK, intent)
@@ -37,9 +37,9 @@ class EditActivity : AppCompatActivity() {
     }
 
     private fun displayProfile(profile: Profile) {
-        name_text_input_layout.editText?.setText(profile.name)
-        email_text_input_layout.editText?.setText(profile.email)
-        phone_text_input_layout.editText?.setText(profile.phone)
+        input_name.editText?.setText(profile.name)
+        input_email.editText?.setText(profile.email)
+        input_phone.editText?.setText(profile.phone)
     }
 
     override fun onBackPressed() {
