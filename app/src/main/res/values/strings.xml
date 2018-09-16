@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">HomeWork</string>
+    <string name="edit_activity_title">Edit</string>
+    <string name="main_activity_title">Profile</string>
+    <string name="ac_main_msg_editing_canceled">Editing canceled</string>
+    <string name="ac_main_msg_profile_shared">Profile shared</string>
+    <string name="ac_main_name">Name</string>
+    <string name="ac_main_e_mail">E-mail</string>
+    <string name="ac_main_phone">Phone</string>
+    <string name="ac_edit_name">Name</string>
+    <string name="ac_edit_e_mail">E-mail</string>
+    <string name="ac_edit_phone">Phone</string>
+    <string name="edit_menu_action_title_save">Save</string>
+    <string name="main_menu_action_title_share">Share</string>
+    <string name="main_menu_action_title_edit">Edit</string>
+    <string name="ac_main_msg_profile_saved">Profile saved</string>
 </resources>
