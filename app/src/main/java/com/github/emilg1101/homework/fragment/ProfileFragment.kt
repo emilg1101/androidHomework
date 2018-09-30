@@ -24,7 +24,6 @@ class ProfileFragment : BaseFragment() {
     }
 
     companion object {
-        @JvmStatic
         fun newInstance() = ProfileFragment()
     }
 }

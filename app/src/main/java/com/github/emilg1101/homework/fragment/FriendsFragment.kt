@@ -19,7 +19,6 @@ class FriendsFragment : BaseFragment() {
         get() = R.layout.fragment_friends
 
     companion object {
-        @JvmStatic
         fun newInstance() = FriendsFragment()
     }
 }

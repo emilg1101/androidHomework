@@ -20,7 +20,6 @@ class MessagesFragment : BaseFragment() {
         get() = R.layout.fragment_messages
 
     companion object {
-        @JvmStatic
         fun newInstance() = MessagesFragment()
     }
 }
