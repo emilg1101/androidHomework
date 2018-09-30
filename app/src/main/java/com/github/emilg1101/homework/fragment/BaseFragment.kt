@@ -11,6 +11,7 @@ abstract class BaseFragment : Fragment() {
 
     abstract val contentLayout: Int
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?
-            = inflater.inflate(contentLayout, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? =
+            inflater.inflate(contentLayout, container, false)
 }
