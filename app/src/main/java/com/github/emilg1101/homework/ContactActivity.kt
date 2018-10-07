@@ -14,9 +14,11 @@ class ContactActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contact)
 
-        supportActionBar?.title = getString(R.string.ac_contact_title)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setDisplayShowHomeEnabled(true)
+        supportActionBar?.apply {
+            title = getString(R.string.ac_contact_title)
+            setDisplayHomeAsUpEnabled(true)
+            setDisplayShowHomeEnabled(true)
+        }
 
         intent.getParcelableExtra<Contact>(CONTACT_EXTRA)?.let {
             displayContact(it)
@@ -30,10 +32,11 @@ class ContactActivity : AppCompatActivity() {
         text_phone.text = contact.phone
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        when (item?.itemId) {
-            android.R.id.home -> onBackPressed()
+    override fun onOptionsItemSelected(item: MenuItem?) = when (item?.itemId) {
+        android.R.id.home -> {
+            onBackPressed()
+            true
         }
-        return super.onOptionsItemSelected(item)
+        else -> super.onOptionsItemSelected(item)
     }
 }

@@ -8,7 +8,7 @@ import com.github.emilg1101.homework.holder.BaseViewHolder
 import com.github.emilg1101.homework.holder.ContactViewHolder
 import com.github.emilg1101.homework.model.Contact
 
-class ContactsAdapter(private val contacts: List<Contact>) : RecyclerView.Adapter<BaseViewHolder<Contact>>() {
+class ContactsAdapter(private val contacts: List<Contact>, private val itemClickListener: (Contact) -> Unit) : RecyclerView.Adapter<BaseViewHolder<Contact>>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<Contact> {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.item_contact, parent, false)
@@ -18,6 +18,6 @@ class ContactsAdapter(private val contacts: List<Contact>) : RecyclerView.Adapte
     override fun getItemCount() = contacts.size
 
     override fun onBindViewHolder(holder: BaseViewHolder<Contact>, position: Int) {
-        holder.bindViewHolder(contacts[position])
+        holder.bindViewHolder(contacts[position], itemClickListener)
     }
 }
