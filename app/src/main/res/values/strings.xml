@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">HomeWork</string>
+    <string name="title_activity_wakeup">WakeUp!</string>
+    <string name="notification_title">Alarm!</string>
+    <string name="notification_text">Wake Up!</string>
+    <string name="main_button_set_time">set time</string>
+    <string name="main_button_start">start</string>
+    <string name="main_button_stop">stop</string>
+    <string name="main_text_time_default">08:00</string>
 </resources>
