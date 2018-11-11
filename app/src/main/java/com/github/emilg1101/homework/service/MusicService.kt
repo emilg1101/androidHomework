@@ -116,6 +116,8 @@ class MusicService : Service() {
 
         notification.contentView = notificationView
         notification.contentView.setTextViewText(R.id.text_title, track.title)
+        notification.contentView.setImageViewResource(R.id.button_next, R.drawable.ic_next)
+        notification.contentView.setImageViewResource(R.id.button_prev, R.drawable.ic_previous)
         if (played) {
             notification.contentView.setImageViewResource(R.id.button_play, R.drawable.ic_pause)
         } else {
@@ -123,7 +125,6 @@ class MusicService : Service() {
         }
         setControlsListeners(notificationView)
         startForeground(101, notification)
-        notificationManager.notify(101, notification)
     }
 
     @RequiresApi(Build.VERSION_CODES.O)

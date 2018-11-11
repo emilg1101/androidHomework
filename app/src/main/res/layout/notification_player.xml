@@ -27,8 +27,7 @@
             android:layout_height="48dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:background="@android:color/transparent"
-            app:srcCompat="@drawable/ic_previous" />
+            android:background="@android:color/transparent" />
 
         <ImageButton
             android:id="@+id/button_play"
@@ -42,8 +41,7 @@
             android:layout_height="48dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:background="@android:color/transparent"
-            app:srcCompat="@drawable/ic_next" />
+            android:background="@android:color/transparent" />
 
     </LinearLayout>
 
